@@ -1,0 +1,38 @@
+<a href="#" class="close-panel">Close</a>
+<h2><%= data.title %></h2>
+    <h4>Released in <%= data.release %></h4>
+    <p><%= data.desc %></p>
+    <div class="meta">
+        <% if (data.meta.directors) { %>
+            <span class="metadata director">
+                <% if (data.meta.directors.length > 1) { %> Directors: <% } else if (data.meta.directors.length == 1) { %> Director: <% } %>
+                <% _.each(data.meta.directors, function (director, index) { %>
+                     <%= director.name %><% if (index < data.meta.directors.length - 1) { %>, <% } %>
+                <% }) %>
+            </span>
+         <% } %>
+    <% if (data.meta.actors) { %>
+    <span class="metadata actor">
+        <% if (data.meta.actors.length > 1) { %>
+            Actors: 
+        <% } else if (data.meta.actors.length == 1) { %>
+            Actor:
+        <% } %>
+        <% _.each(data.meta.actors, function (actors, index) { %>
+        <ul>
+            <li><%= actors.name %><% if (index < data.meta.actors.length - 1) { %>, <% } %>
+</li>
+        </ul>
+        <% }) %>
+    </span>
+    <% } %>
+
+    <% if (data.meta.writers) { %>
+        <span class="metadata writer"> <% if (data.meta.writers.length > 0) { %> Writers: <% } else if (data.meta.writers.length == 1) { %> Writer: <% } %>
+            <% _.each(data.meta.writers, function (writers) { %>
+                <%= writers.name %><% if (index < data.meta.writers.length - 1) { %>, <% } %>
+            <% }) %>
+        </span>
+        <% } %>
+    </div>
+

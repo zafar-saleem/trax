@@ -1,0 +1,23 @@
+.list {
+  width: 151px;
+  display: inline-block;
+  margin-right: 60px; }
+  .list .thumbnail {
+    padding: 0;
+    box-shadow: 2px 2px 8px #999; }
+
+.last {
+  margin-right: 0; }
+
+.list-meta {
+  padding-left: 6px;
+  font-size: 12px;
+  color: #ababab;
+  font-weight: normal; }
+
+.list-title {
+  padding: 6px 0px 4px 6px;
+  margin: 0;
+  margin-bottom: -5px; }
+
+/*# sourceMappingURL=movies-list.css.map */

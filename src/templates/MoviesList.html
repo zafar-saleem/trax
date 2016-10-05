@@ -1,0 +1,9 @@
+<% _.each(movies, function (movie) { %>
+<div class="list<% if (movie.id == 4) { %> last<% } %>">
+    <a href="#" class="link-list">
+        <img id="<%= movie.id %>" src="<%= movie.images.cover %>" class="thumbnail">
+        <h4 class="list-meta list-title"><%= movie.title.substring(0, 20) %><% if (movie.title.length > 20) { %>...<% } %></h4>
+        <span class="list-meta list-year"><%= movie.meta.releaseYear %></span>
+    </a>
+</div>
+<% }) %>

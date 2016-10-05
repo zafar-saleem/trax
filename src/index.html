@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trax</title>
+	<!-- build:css styles/styles.min.css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/css/styles.css" type="text/css" media="screen" charset="utf-8">
+	<!-- /build -->
+</head>
+<body class="body">
+    <div class="wrapper">
+        <div class="m-overlay is-hidden"></div>
+        <div class="m-panel"></div>
+        <div class="l-main">
+            <div class="m-movie"></div>
+            <div class="m-movies-list"></div>
+        </div>
+    </div>
+	<!-- build:js scripts/scripts.min.js -->
+    <script src="js/libs/requirejs/require.js"></script>
+    <script>
+        require(['js/config'], function() {
+            require(['main'], function(main) {
+            });
+        });
+    </script>
+    <!-- /build -->
+</body>
+</html>
